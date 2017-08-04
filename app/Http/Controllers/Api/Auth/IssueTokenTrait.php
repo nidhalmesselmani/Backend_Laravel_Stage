@@ -19,6 +19,9 @@ trait IssueTokenTrait {
           'scope' => $scope
 
     	];
+        if($grantType !== 'social'){
+            $params['username'] = $request->username ?: $request->email;
+        }
 
     	$request->request->add($params);
 

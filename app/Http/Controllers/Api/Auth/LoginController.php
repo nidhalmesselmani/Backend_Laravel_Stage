@@ -18,6 +18,7 @@ class LoginController extends Controller
 
 
     public function __construct(){
+      //recuperer le client pour génerer le token
     		$this->client = Client::find(1);
     	}
 
